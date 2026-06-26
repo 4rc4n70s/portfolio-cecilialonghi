@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphic designs — Cecilia Longhi</title>
+  <meta name="description" content="Browse graphic designs, branding guidelines, and visual illustrations created by Cecilia Longhi.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURUxpcU3H2DoAAAABdFJOUwBA5thmAAAADElEQVQI12NgIA0AAAAwAAHHqoWOAAAAAElFTkSuQmCC">
+</head>
+<body>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <a href="/" class="mobile-logo">Cecilia Longhi</a>
+    <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+  <div class="app-container">
+    <!-- Editorial Navigation Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <a href="/" class="logo-title">
+          Cecilia Longhi
+          <span>Video Editor</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <li class="nav-item"><a href="/about-me">About me</a></li>
+        <li class="nav-item"><a href="/">Work</a></li>
+        <li class="nav-item"><a href="/bigger-projects">Bigger projects</a></li>
+        <li class="nav-item"><a href="/social-media-videos">Social Media Videos</a></li>
+        <li class="nav-item"><a href="/youtube-videos">Youtube Videos</a></li>
+        <li class="nav-item"><a href="/graphic-designs">Graphic designs</a></li>
+        <li class="nav-item"><a href="/other-videos">Other videos</a></li>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p class="footer-text">&copy; 2026 Cecilia Longhi.<br>Creative Visual Editor.</p>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="page-header">
+        <span class="page-category">Branding & Art</span>
+        <h1 class="page-title">Graphic designs</h1>
+        <p class="page-description">Demonstrating visual identity, layout structuring, and illustrative design skills for custom digital branding.</p>
+      </div>
+
+      <div class="designs-masonry">
+        <!-- Design 1 -->
+        <div class="design-card">
+          <img src="images/9122335e-409f-47cd-9d8c-e2d521eab8e5_rw_1200.png" alt="Illustration Layout 1" loading="lazy">
+          <div class="design-card-overlay">
+            <span class="design-card-title">Editorial Design</span>
+          </div>
+        </div>
+
+        <!-- Design 2 -->
+        <div class="design-card">
+          <img src="images/1baac76f-27a5-4694-bdb6-14d7eadb3e16_rw_1920.png" alt="Illustration Layout 2" loading="lazy">
+          <div class="design-card-overlay">
+            <span class="design-card-title">Art Direction</span>
+          </div>
+        </div>
+
+        <!-- Design 3 -->
+        <div class="design-card">
+          <img src="images/bd2e4ae4-5790-4cd6-931a-500c1881567d_rw_1920.png" alt="Illustration Layout 3" loading="lazy">
+          <div class="design-card-overlay">
+            <span class="design-card-title">Typography Layout</span>
+          </div>
+        </div>
+
+        <!-- Design 4 -->
+        <div class="design-card">
+          <img src="images/c458b7fa-8e37-41fc-8d85-95ea93dee168_rw_1920.png" alt="Illustration Layout 4" loading="lazy">
+          <div class="design-card-overlay">
+            <span class="design-card-title">Branding Guidelines</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Lightbox Popup Overlay -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+      <img src="" alt="Full Screen Preview" class="lightbox-img" id="lightbox-img">
+    </div>
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+</html>

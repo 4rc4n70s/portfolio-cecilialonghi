@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-cecilialonghi",
+  "version": "1.0.0",
+  "description": "Maria Cecilia Longhi - Professional Video Editor Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
