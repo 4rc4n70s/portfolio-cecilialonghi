@@ -13,10 +13,11 @@
   --text-muted: #626270;
   
   --accent: #e5c158;          /* Bright champagne gold */
+  --accent-hover: #f0d37e;    /* Slightly lighter gold for hover state */
   --accent-rgb: 229, 193, 88;
-  --accent-glow: rgba(229, 193, 88, 0.15);
+  --accent-glow: rgba(var(--accent-rgb), 0.15);
   --border-color: rgba(255, 255, 255, 0.05);
-  --border-hover: rgba(229, 193, 88, 0.25);
+  --border-hover: rgba(var(--accent-rgb), 0.25);
   
   --sidebar-width: 280px;
   --transition-speed: 0.4s;
@@ -44,14 +45,15 @@ html[data-theme="light"] {
   --bg-card-overlay: rgba(250, 250, 252, 0.95);
   
   --text-primary: #0a0a0c;    /* Deep obsidian black */
-  --text-secondary: #4a4a5a;  /* Charcoal */
-  --text-muted: #8a8a9a;      /* Gray */
+  --text-secondary: #3a3a4a;  /* Dark charcoal for better readability */
+  --text-muted: #5c5c6c;      /* Muted gray with 4.5:1+ contrast on light backgrounds */
   
-  --accent: #d4af37;          /* Classic gold */
-  --accent-rgb: 212, 175, 55;
-  --accent-glow: rgba(212, 175, 55, 0.1);
+  --accent: #8c6200;          /* Premium dark gold for excellent contrast on light backgrounds */
+  --accent-hover: #a67400;    /* Slightly lighter/richer gold for hover state */
+  --accent-rgb: 140, 98, 0;
+  --accent-glow: rgba(var(--accent-rgb), 0.1);
   --border-color: rgba(0, 0, 0, 0.08);
-  --border-hover: rgba(212, 175, 55, 0.4);
+  --border-hover: rgba(var(--accent-rgb), 0.4);
   
   --grad-color-1: rgba(245, 245, 247, 1);
   --grad-color-2: rgba(255, 255, 255, 1);
@@ -103,7 +105,7 @@ body {
   font-family: var(--font-main);
   background-color: var(--bg-primary);
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(229, 193, 88, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 10% 20%, rgba(var(--accent-rgb), 0.02) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(100, 149, 237, 0.015) 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, var(--grad-color-1) 0%, var(--grad-color-2) 100%);
   background-attachment: fixed;
@@ -116,7 +118,7 @@ body {
 
 body.work-page {
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(229, 193, 88, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 10% 20%, rgba(var(--accent-rgb), 0.02) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(100, 149, 237, 0.015) 0%, transparent 50%),
     url('images/uploaded_media_1782517265344.jpg');
   background-blend-mode: normal, normal, multiply;
@@ -128,10 +130,11 @@ body.work-page {
 
 html[data-theme="light"] body.work-page {
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(229, 193, 88, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 10% 20%, rgba(var(--accent-rgb), 0.04) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(100, 149, 237, 0.03) 0%, transparent 50%),
+    linear-gradient(rgba(245, 245, 247, 0.88), rgba(245, 245, 247, 0.88)),
     url('images/uploaded_media_1782517265344.jpg');
-  background-blend-mode: normal, normal, normal; /* Uses the original bright image background */
+  background-blend-mode: normal, normal, normal, normal; /* Overlay washes out the dark image */
 }
 
 /* Custom Scrollbar */
@@ -611,14 +614,18 @@ a {
   border-radius: 30px;
   font-weight: 600;
   font-size: 0.92rem;
-  box-shadow: 0 5px 15px rgba(229, 193, 88, 0.2);
+  box-shadow: 0 5px 15px rgba(var(--accent-rgb), 0.2);
   transition: all var(--transition-speed) var(--transition-ease);
 }
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(229, 193, 88, 0.4);
+  box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.4);
+}
+
+html[data-theme="light"] .btn-primary {
+  color: #ffffff;
 }
 
 .btn-secondary {
