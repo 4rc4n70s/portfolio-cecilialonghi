@@ -584,6 +584,22 @@ a {
   transform: translateY(-3px);
 }
 
+/* --- VERTICAL GRID FOR REELS --- */
+.vertical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.vertical-grid .content-card {
+  padding: 1rem;
+}
+
+.vertical-grid .iframe-wrapper {
+  aspect-ratio: 9 / 16;
+}
+
 /* --- PROJECTS DETAILS STACK --- */
 .content-stack {
   display: flex;
