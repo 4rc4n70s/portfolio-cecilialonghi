@@ -107,8 +107,12 @@ body {
   background-image: 
     radial-gradient(circle at 10% 20%, rgba(var(--accent-rgb), 0.02) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(100, 149, 237, 0.015) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, var(--grad-color-1) 0%, var(--grad-color-2) 100%);
+    url('images/uploaded_media_1782517265344.jpg');
+  background-blend-mode: normal, normal, multiply;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text-primary);
   min-height: 100vh;
   display: flex;
@@ -116,25 +120,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.work-page {
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(var(--accent-rgb), 0.02) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(100, 149, 237, 0.015) 0%, transparent 50%),
-    url('images/uploaded_media_1782517265344.jpg');
-  background-blend-mode: normal, normal, multiply;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-html[data-theme="light"] body.work-page {
+html[data-theme="light"] body {
   background-image: 
     radial-gradient(circle at 10% 20%, rgba(var(--accent-rgb), 0.04) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(100, 149, 237, 0.03) 0%, transparent 50%),
     linear-gradient(rgba(245, 245, 247, 0.88), rgba(245, 245, 247, 0.88)),
     url('images/uploaded_media_1782517265344.jpg');
-  background-blend-mode: normal, normal, normal, normal; /* Overlay washes out the dark image */
+  background-blend-mode: normal, normal, normal, normal;
 }
 
 /* Custom Scrollbar */
