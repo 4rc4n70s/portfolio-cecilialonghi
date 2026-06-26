@@ -77,6 +77,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.work-page {
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(229, 193, 88, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(100, 149, 237, 0.015) 0%, transparent 50%),
+    url('images/uploaded_media_1782517265344.jpg');
+  background-blend-mode: normal, normal, multiply;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
